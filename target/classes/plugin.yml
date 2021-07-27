@@ -1,0 +1,28 @@
+name: ResourcePackLoader
+version: 1.0
+main: net.cybercake.resourcepackloader.Main
+api-version: 1.17
+authors: [ CyberedCake ]
+description: Automatically load resource packs from direct download links
+website: https://twitter.com/trueCyberCake
+
+permissions:
+  rploader.*:
+    description: Allowing a player this permission will give them all permissions for the ResourcePackLoader plugin
+    default: op
+    children:
+      - rploader.reload
+      - rploader.bypassrp
+  rploader.reload:
+    description: Allowing a player this permission will give them the ability to use /rploader reload
+    default: op
+  rploader.bypassrp:
+    description: Allowing a player this permission will give them the ability to bypass the resource pack download on join
+    default: op
+
+
+commands:
+  rploader:
+    description: The main command for the ResourcePackLoader plugin! Use /rploader help for help.
+    usage: Use §7/rploader help §ffor help. §cIf you're seeing this message even whilst doing §e/rploader help§c, it means your plugin is broken!
+    aliases: [resourcepackloader, rpl]

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ResourcePackLoader:jar">
+    <output-path>$PROJECT_DIR$/../Desktop/MinecraftServers/SMPs Bungee Network/Test Server (External)/plugins</output-path>
+    <root id="archive" name="ResourcePackLoader.jar">
+      <element id="module-output" name="ResourcePackLoader" />
+    </root>
+  </artifact>
+</component>

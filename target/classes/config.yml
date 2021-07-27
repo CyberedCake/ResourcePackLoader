@@ -1,0 +1,82 @@
+#
+#        ██████╗░          ██████╗░          ██╗░░░░░
+#        ██╔══██╗          ██╔══██╗          ██║░░░░░
+#        ██████╔╝          ██████╔╝          ██║░░░░░
+#        ██╔══██╗          ██╔═══╝░          ██║░░░░░
+#        ██║░░██║          ██║░░░░░          ███████╗
+#        ╚═╝░░╚═╝esource   ╚═╝░░░░░ack       ╚══════╝oader
+#
+#   A plugin that will automatically load your resource packs
+#              from a direct-download link!
+
+
+
+enabled: true
+# Determines if the plugin is enabled, if this is 'false', the
+# plugin will not attempt to send the resource packs to a player
+# when they join!
+
+sendResourcePackBasedOnPermissions: false
+# Determines if the plugin will send the resource pack to everyone
+# or just players without a certain permission.
+
+resourcePackLink: https://example.com/put-direct-download-link-here
+# The resource pack that will be sent to the client when they join the
+# server. Note: This link must be a direct download link, which means
+# that if you paste the link into a browser it instantly downloads.
+# Dropbox has a direct download system, by changing the "?dl=" at the end
+# of a URL with "?dl=1" -- https://www.dropbox.com/s/xxx/xxx.zip?dl=0 to
+# https://www.dropbox.com/s/xxx/xxx.zip?dl=1
+
+resourcePackPrompt: '&cThis texture pack is important to the gameplay that will follow, &fplease accept the pack!'
+# This is the text that will appear under the resource pack prompt (the 'yes'
+# or 'no' screen). Above the message will say 'Message from server:'
+#
+# Color codes can be used here. View color code list here:
+#  https://www.digminecraft.com/lists/color_list_pc.php
+
+kickIfDenied: true
+# Kicks a player if they deny the resource pack installation, you can
+# customize the message below.
+
+kickDeniedMessage:
+  useDefault: false
+  # If you don't want to use a customized message below, set this to 'true',
+  # which will just kick them for 'Please accept our resource pack to continue!'
+
+  msg:
+    - '&6&lYou have been kicked from &aserver-name&6&l!'
+    - ' '
+    - '&7&oPlease accept our resource pack in order to continue playing!'
+    - ' '
+    - '&4&oHaving troubles? &cContact administrators at &b&nourdomain.com&c!'
+    - ' '
+    - '&f&oRe-connect later at &b&omc.ourdomain.com&f&o!'
+  # If 'useDefault' is set to 'false', this message will appear when someone
+  # denies the use of the texture pack, as long as 'kickIfDenied' is true.
+  #
+  # Color codes can be used here. View color code list here:
+  #  https://www.digminecraft.com/lists/color_list_pc.php
+
+onAccept:
+  # Anything in this configuration section will be things that occur when
+  # a player accepts your texture pack. You can disable one or any of these
+  # by replacing it with 'disable' or 'disabled' or 'off'
+  #
+  # Color codes can be used in basically all of these. View color code list here:
+  #          https://www.digminecraft.com/lists/color_list_pc.php
+  sendTitle: '&6&lWelcome to &aserver-name&6&l!'
+  sendSubtitle: '&aEnjoy your stay =)'
+  sendActionBar: disabled
+  playSound: ENTITY_PLAYER_LEVELUP # View a list of spigot sounds: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+  soundPitch: 1.0 # This number is a decial that can be between 0.0 and 2.0
+  chatMsg:
+    - ' '
+    - '&6&lWelcome to &aserver-name&6&l!'
+    - '&a&oEnjoy your stay =)'
+  executeCommands:
+    - disabled
+    # Example entries:
+    # - '/spawn'
+    # - '/rules'
+    # - '/motd'
