@@ -2,6 +2,7 @@ package net.cybercake.resourcepackloader.Commands;
 
 import net.cybercake.resourcepackloader.Commands.SubCommands.Help;
 import net.cybercake.resourcepackloader.Commands.SubCommands.Reload;
+import net.cybercake.resourcepackloader.Commands.SubCommands.SendPack;
 import net.cybercake.resourcepackloader.Utils.Utils;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.*;
@@ -30,6 +31,7 @@ public class CommandManager implements CommandExecutor, TabCompleter {
     public CommandManager() {
         subcommands.add(new Help());
         subcommands.add(new Reload());
+        subcommands.add(new SendPack());
     }
 
     @Override
